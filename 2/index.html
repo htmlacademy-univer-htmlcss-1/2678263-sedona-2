@@ -29,18 +29,13 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
+              <span class="navigation-badge">3</span>
             </a>
           </li>
           <li>
-            <form
-              class="hotel-search-form"
-              action="https://echo.htmlacademy.ru/"
-              method="post"
-            >
               <button class="button open-search-form" type="submit">
                 Хочу сюда
               </button>
-            </form>
           </li>
         </ul>
       </nav>
@@ -56,10 +51,12 @@
       </section>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <h3>Настоящий городок</h3>
-        <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-        <img class="foto" src="#" alt="жизнь не атракцион">
         <ul>
+          <li>
+            <h3>Настоящий городок</h3>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img class="foto" src="#" alt="жизнь не атракцион">
+          </li>
           <li>
             <h3>Небольшая площадь</h3>
             <p>Все достопримечательности находятся очень близко</p>
@@ -109,15 +106,9 @@
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <form
-          class="hotel-search-form"
-          action="https://echo.htmlacademy.ru/"
-          method="post"
-        >
           <button class="button open-search-form" type="submit">
             ПОИСК ГОСТИНИЦЫ В седоне
           </button>
-        </form>
       </section>
     </main>
     <footer class="footer-index">
@@ -133,9 +124,9 @@
         >
           <input
             type="email"
-            id="subscription-date"
-            name="subscription-date"
-            placeholder="email"
+            name="user-email"
+            placeholder="Ваш e-mail"
+            required
           >
           <button class="button" type="submit">Подписаться</button>
         </form>
