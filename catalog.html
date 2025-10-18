@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <header class="page-header">
       <a href="index.html"
-        ><img class="logo" src="#" alt="маленький логотип"
+        ><img class="logo" src="#" alt="маленький логотип" width="300" height="200"
         ></a>
       <nav class="navigation">
         <ul class="navigation-list">
@@ -18,7 +19,7 @@
             <a class="navigation-link" href="index.html">О седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">Гостиницы</a>
+            <span class="navigation-link navigation-link-current">Гостиницы</span>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -49,11 +50,10 @@
             <a
               class="breadcrumbs-link visually-hidden"
               href="index.html"
-              >Главная</a
-            >
+              >Главная</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Гостиницы</a>
+            <span class="breadcrumbs-link breadcrumbs-link-current">Гостиницы</span>
           </li>
         </ul>
       </header>
@@ -151,7 +151,9 @@
                 </label>
               </li>
               <li>
+                <label class="visually-hidden" for="price-range">price-range</label>
                 <input
+                  id="price-range"
                   type="range"
                   name="price-range"
                   min="0"
@@ -174,7 +176,7 @@
         <h2 class="hotels-found">
           Найдено гостиниц: <span class="hotels-count">38</span>
         </h2>
-        <select class="select-control" aria-label="Сортировка">
+        <select class="select-control" aria-label="Сортировка" name="something">
           <option value="popular">Сначала популярные</option>
           <option value="cheap">Сначала дешевые</option>
           <option value="expensive">Сначала дорогие</option>
@@ -185,14 +187,14 @@
         <a class="button" href="#">
           <span class="visually-hidden">Показать по одной с подписью</span>
         </a>
-        <a href="#" class="button button-light">
+        <a class="button button-light" href="#">
           <span class="visually-hidden">Показать список</span>
         </a>
 
         <ul class="hotel-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="#" alt="Amara Resort & Spa">
+              <img class="hotel-card-image" src="#" alt="Amara Resort & Spa" width="300" height="200">
               <h3 class="hotel-card-title">Amara Resort & Spa</h3>
               <p class="hotel-type">Гостиница</p>
               <p class="hotel-price">От 4000 ₽</p>
@@ -208,9 +210,7 @@
               </button>
             </div>
             <div class="hotel-card-rating">
-              <span class="stars"
-                >&#9733;&#9733;&#9733;&#9733;</span
-              >
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
               <span class="rating-value">Рейтинг: 8,5</span>
             </div>
           </li>
@@ -221,6 +221,7 @@
                 class="hotel-card-image"
                 src="#"
                 alt="Villas at Poco Diablo"
+                width="300" height="200"
               >
               <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
               <p class="hotel-type">Гостиница</p>
@@ -237,16 +238,14 @@
               </button>
             </div>
             <div class="hotel-card-rating">
-              <span class="stars"
-                >&#9733;&#9733;&#9733;&#9733;</span
-              >
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
               <span class="rating-value">Рейтинг: 9,2</span>
             </div>
           </li>
 
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="#" alt="Desert Quail Inn">
+              <img class="hotel-card-image" src="#" alt="Desert Quail Inn" width="300" height="200">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
               <p class="hotel-type">Гостиница</p>
               <p class="hotel-price">От 2500 ₽</p>
@@ -262,16 +261,14 @@
               </button>
             </div>
             <div class="hotel-card-rating">
-              <span class="stars"
-                >&#9733;&#9733;&#9733;</span
-              >
+              <span class="stars">&#9733;&#9733;&#9733;</span>
               <span class="rating-value">Рейтинг: 6,9</span>
             </div>
           </li>
 
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="#" alt="GreenTree Inn">
+              <img class="hotel-card-image" src="#" alt="GreenTree Inn" width="300" height="200">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
               <p class="hotel-type">Гостиница</p>
               <p class="hotel-price">От 2500 ₽</p>
@@ -287,9 +284,7 @@
               </button>
             </div>
             <div class="hotel-card-rating">
-              <span class="stars"
-                >&#9733;&#9733;</span
-              >
+              <span class="stars">&#9733;&#9733;</span>
               <span class="rating-value">Рейтинг: 5,0</span>
             </div>
           </li>
@@ -334,7 +329,9 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
+        <label class="visually-hidden" for="user-email">Ваш e-mail</label>
           <input
+            id="user-email"
             type="email"
             name="user-email"
             placeholder="Ваш e-mail"
@@ -350,7 +347,7 @@
             <a
               class="footer-button"
               href="https://vk.com/htmlacademy"
-              target="_blank"
+              target="_blank" rel="noreferrer noopener"
             >
               <span class="visually-hidden">ВКонтакте</span>
             </a>
@@ -359,7 +356,7 @@
             <a
               class="footer-button"
               href="https://t.me/htmlacademy"
-              target="_blank"
+              target="_blank" rel="noreferrer noopener"
             >
               <span class="visually-hidden">Телеграм</span>
             </a>
@@ -368,7 +365,7 @@
             <a
               class="footer-button"
               href="https://www.youtube.com/user/htmlacademyru"
-              target="_blank"
+              target="_blank" rel="noreferrer noopener"
             >
               <span class="visually-hidden">Ютюб</span>
             </a>
@@ -377,15 +374,16 @@
       </section>
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <a class="footer-phone" href="tel:+78128121212"> +7 (812) 812-12-12 </a>
+        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
       <section class="footer-logo-html">
         <h2 class="visually-hidden">Логотип HTML academy</h2>
-        <a href="https://htmlacademy.ru/" target="_blank">
+        <a href="https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
           <img
             class="footer-logo-img-html"
             src="#"
             alt="логотип HTML academy"
+            width="300" height="200"
           >
         </a>
       </section>
