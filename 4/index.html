@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet">
+    <title>HTML Academy: Седона</title>
+    <base href="https://htmlacademy-univer-htmlcss-1.github.io/2678263-sedona-2/4/">
+</head>
+  <body>
+    <header class="header-index">
+      <img
+        class="logo"
+        src="images/icons/logo.svg"
+        alt="маленький логотип"
+        width="140"
+        height="70">
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <span class="navigation-link navigation-link-current">Главная</span>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="navigation-badge">3</span>
+            </a>
+          </li>
+          <li>
+            <button class="button navigation-list-open-form" type="submit">
+              Хочу сюда
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-index">
+      <section class="hero">
+        <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+        <img
+          class="logo-city"
+          src="images/logo/welcome.svg"
+          alt="welcome"
+          width="458"
+          height="352">
+      </section>
+      <section class="about">
+        <h2 class="header-2">
+          Седона — небольшой городок в Аризоне, заслуживающий большего!
+        </h2>
+        <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </section>
+      <section class="advantages">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul>
+          <li class="advantages-1">
+            <h3 class="header-3">Настоящий городок</h3>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img
+              class="foto"
+              src="images/content/photo-1.jpg"
+              alt="жизнь не атракцион"
+              width="800"
+              height="385">
+          </li>
+          <li>
+            <h3 class="header-3">Небольшая площадь</h3>
+            <p>Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="advantages-2">
+            <h3 class="header-3">Красивая дорога</h3>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li>
+            <h3 class="header-3">Мало туристов</h3>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+          <li class="advantages-1">
+            <img
+              class="foto"
+              src="images/content/photo-2.jpg"
+              alt="мост дьявола"
+              width="800"
+              height="385">
+            <h3 class="header-3">Там есть мост дьявола</h3>
+            <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </li>
+        </ul>
+      </section>
+      <section class="invitation">
+        <h2 class="header-2">
+          Приезжайте в Седону отдохнуть в комфорте и уюте!
+        </h2>
+        <p>Опытный персонал и качественное обслуживание!</p>
+      </section>
+      <section class="service">
+        <h2 class="visually-hidden">Сервис</h2>
+        <ul>
+          <li>
+            <h3 class="header-3">Жильё</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <img
+              class="logo-line"
+              src="images/icons/home.svg"
+              alt="линейный маленький дом"
+              width="74"
+              height="70">
+          </li>
+          <li class="service-1">
+            <h3 class="header-3">Еда</h3>
+            <p>
+              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!!
+            </p>
+            <img
+              class="logo-line"
+              src="images/icons/food.svg"
+              alt="линейный маленький бургер"
+              width="74"
+              height="70">
+          </li>
+          <li>
+            <h3 class="header-3">Сувениры</h3>
+            <p>Не только китайского, но и настоящего местного производства!</p>
+            <img
+              class="logo-line"
+              src="images/icons/present.svg"
+              alt="линейный маленький подарок"
+              width="74"
+              height="70">
+          </li>
+        </ul>
+      </section>
+      <section class="hotel-search">
+        <h2 class="header-2">Заинтересовались?</h2>
+        <p>
+          Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+          предложения гостиниц в Седоне
+        </p>
+        <button class="button hotel-search-open-form" type="submit">
+          ПОИСК ГОСТИНИЦЫ В седоне
+        </button>
+      </section>
+      <section class="subscription">
+        <h2 class="header-2 subscription-header">Подпишитесь на рассылку</h2>
+        <p>
+          Только полезная информация и никакого спама, честное бойскаутское!
+        </p>
+        <form
+          class="subscription-form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <label class="visually-hidden" for="user-email">Ваш e-mail</label>
+          <input
+            id="user-email"
+            type="email"
+            name="user-email"
+            placeholder="Ваш e-mail"
+            required>
+          <button class="button additional-button" type="submit">
+            Подписаться
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer-index">
+      <section class="footer-social">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a
+              class="footer-button"
+              href="https://vk.com/htmlacademy"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="footer-social-logo"
+                src="images/icons/social-vk.svg"
+                alt="логотип вк"
+                width="24"
+                height="14">
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a
+              class="footer-button"
+              href="https://t.me/htmlacademy"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="footer-social-logo"
+                src="images/icons/social-telegram.svg"
+                alt="логотип телеграм"
+                width="18"
+                height="15">
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a
+              class="footer-button"
+              href="https://www.youtube.com/user/htmlacademyru"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="footer-social-logo"
+                src="images/icons/social-youtube.svg"
+                alt="логотип youtube"
+                width="22"
+                height="17">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </section>
+      <section class="footer-logo-html">
+        <h2 class="visually-hidden">Логотип HTML academy</h2>
+        <a
+          href="https://htmlacademy.ru/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img
+            class="footer-logo-img-html"
+            src="images/logo/html-academy.svg"
+            alt="логотип HTML academy"
+            width="114"
+            height="32">
+        </a>
+      </section>
+    </footer>
+  </body>
+</html>
