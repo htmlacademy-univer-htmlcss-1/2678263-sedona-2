@@ -19,6 +19,7 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  color: #333333;
   background-color: #ffffff;
 }
 
@@ -85,7 +86,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  color: #333333;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -98,8 +99,12 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  color: #333333;
+  color: #000000;
   text-transform: uppercase;
+}
+
+.advantages-1-header.header-3 {
+  color: #ffffff;
 }
 
 .main-index {
@@ -123,6 +128,7 @@ body {
 
 .advantages-1 {
   background-color: #82b3d3;
+  color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -150,6 +156,7 @@ body {
   background-color: #333333;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  color: #ffffff;
 }
 
 .inner-header {
