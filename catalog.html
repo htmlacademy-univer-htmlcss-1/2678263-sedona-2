@@ -9,29 +9,29 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <a href="index.html">
-          <img
-            class="logo"
-            src="images/icons/logo.svg"
-            alt="маленький логотип"
-            width="140"
-            height="70">
-        </a>
+        <div class="logo-wrapper">
+          <a href="index.html">
+            <img
+              class="logo"
+              src="images/icons/logo.svg"
+              alt="маленький логотип"
+              width="140"
+              height="70">
+          </a>
+        </div>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html">О Седоне</a>
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <span class="navigation-link navigation-link-current">
-                Гостиницы
-              </span>
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-list navigation-user">
+          <ul class="navigation-user">
             <li class="navigation-item">
               <a class="navigation-link" href="#">
                 <span class="visually-hidden">Поиск</span>
@@ -44,7 +44,7 @@
               </a>
             </li>
             <li>
-              <button class="button open-search-form" type="submit">
+              <button class="button navigation-list-open-form" type="submit">
                 Хочу сюда
               </button>
             </li>
@@ -196,8 +196,7 @@
             <select
               class="select-control"
               aria-label="Сортировка"
-              name="something"
-            >
+              name="something">
               <option value="popular">Сначала популярные</option>
               <option value="cheap">Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
@@ -333,21 +332,28 @@
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a class="pagination-link" href="#">
+                <span class="pagination-text">2</span>
+              </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
+              <a class="pagination-link" href="#">
+                <span class="pagination-text">3</span>
+              </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
+              <a class="pagination-link" href="#">
+                <span class="pagination-text">4</span>
+              </a>
             </li>
-
             <li class="pagination-item pagination-dots" aria-hidden="true">
               …
             </li>
 
             <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
+              <a class="pagination-link" href="#">
+                <span class="pagination-text">10</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -359,8 +365,7 @@
           <form
             class="subscription-form"
             action="https://echo.htmlacademy.ru/"
-            method="post"
-          >
+            method="post">
             <label class="visually-hidden" for="user-email">Ваш e-mail</label>
             <input
               id="user-email"
@@ -374,7 +379,6 @@
           </form>
         </section>
       </main>
-
       <footer class="footer-index">
         <section class="footer-social">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
@@ -384,8 +388,7 @@
                 class="footer-button"
                 href="https://vk.com/htmlacademy"
                 target="_blank"
-                rel="noreferrer noopener"
-              >
+                rel="noreferrer noopener">
                 <img
                   class="footer-social-logo"
                   src="images/icons/social-vk.svg"
@@ -399,8 +402,7 @@
                 class="footer-button"
                 href="https://t.me/htmlacademy"
                 target="_blank"
-                rel="noreferrer noopener"
-              >
+                rel="noreferrer noopener">
                 <img
                   class="footer-social-logo"
                   src="images/icons/social-telegram.svg"
