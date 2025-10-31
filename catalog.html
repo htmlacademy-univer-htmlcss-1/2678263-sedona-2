@@ -189,11 +189,12 @@
         </header>
         <div class="page-inner-container">
           <section class="hotels-catalog">
-            <h2 class="hotels-found">
+            <ul class="hotel-search-sort">
+            <li><h2 class="header-2 hotels-found">
               Найдено гостиниц:
               <span class="hotels-count">38</span>
-            </h2>
-            <select
+            </h2></li>
+            <li class="view-toggle-wrapper"><select
               class="select-control"
               aria-label="Сортировка"
               name="something">
@@ -201,15 +202,18 @@
               <option value="cheap">Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <a class="button-light" href="#">
+            <ul class="view-toggle-buttons">
+            <li><a class="button-light button" href="#">
               <span class="visually-hidden">Показать карточки</span>
-            </a>
-            <a class="button-light" href="#">
+            </a></li>
+            <li><a class="button-light button" href="#">
               <span class="visually-hidden">Показать по одной с подписью</span>
-            </a>
-            <a class="button-light" href="#">
+            </a></li>
+            <li><a class="button-light button" href="#">
               <span class="visually-hidden">Показать список</span>
-            </a>
+            </a></li>
+            </ul></li>
+            </ul>
 
             <ul class="hotel-list">
               <li class="hotel-card">
@@ -238,7 +242,6 @@
                   <span class="button rating-value">Рейтинг: 8,5</span>
                 </div>
               </li>
-
               <li class="hotel-card">
                 <a class="hotel-card-link" href="#">
                   <img
