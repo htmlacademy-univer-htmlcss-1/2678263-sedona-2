@@ -9,12 +9,14 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <img
-          class="logo"
-          src="images/icons/logo.svg"
-          alt="маленький логотип"
-          width="140"
-          height="70">
+        <div class="logo-wrapper">
+          <img
+            class="logo"
+            src="images/icons/logo.svg"
+            alt="маленький логотип"
+            width="140"
+            height="70">
+        </div>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -23,13 +25,13 @@
               </span>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">О седоне</a>
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-list navigation-user">
+          <ul class="navigation-user">
             <li class="navigation-item">
               <a class="navigation-link" href="#">
                 <span class="visually-hidden">Поиск</span>
@@ -49,7 +51,7 @@
           </ul>
         </nav>
       </header>
-       <main class="main-container main-index">
+      <main class="main-container main-index">
         <section class="hero">
           <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
           <img
@@ -59,7 +61,7 @@
             width="458"
             height="352">
         </section>
-         <section class="about">
+        <section class="about">
           <h2 class="header-2">
             Седона — небольшой городок в Аризоне, заслуживающий большего!
           </h2>
@@ -70,7 +72,9 @@
           <ul class="advantages-list">
             <li class="advantages-1">
               <h3 class="header-3 advantages-1-header">Настоящий городок</h3>
-              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <p class="text-in-blocks">
+                Седона — не аттракцион для туристов, там течёт своя жизнь
+              </p>
             </li>
             <li>
               <img
@@ -82,15 +86,21 @@
             </li>
             <li class="advantages-3">
               <h3 class="header-3">Небольшая площадь</h3>
-              <p>Все достопримечательности находятся очень близко</p>
+              <p class="text-in-blocks">
+                Все достопримечательности находятся очень близко
+              </p>
             </li>
             <li class="advantages-2">
               <h3 class="header-3">Красивая дорога</h3>
-              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="text-in-blocks">
+                Ехать в Седону из Лас-Вегаса совсем не скучно!
+              </p>
             </li>
             <li class="advantages-3">
               <h3 class="header-3">Мало туристов</h3>
-              <p>Большинство едет в Гранд Каньон и толпится там</p>
+              <p class="text-in-blocks">
+                Большинство едет в Гранд Каньон и толпится там
+              </p>
             </li>
             <li>
               <img
@@ -104,7 +114,9 @@
               <h3 class="header-3 advantages-1-header">
                 Там есть мост дьявола
               </h3>
-              <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <p class="text-in-blocks">
+                Да, по нему можно пройти! Если вы осмелитесь, разумеется
+              </p>
             </li>
           </ul>
         </section>
@@ -119,7 +131,9 @@
           <ul class="service-list">
             <li class="service-1">
               <h3 class="header-3">Жильё</h3>
-              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p class="text-in-blocks">
+                Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!
+              </p>
               <img
                 class="logo-line"
                 src="images/icons/home.svg"
@@ -129,9 +143,9 @@
             </li>
             <li class="service-2">
               <h3 class="header-3">Еда</h3>
-              <p>
-                Всегда заказывайте топовый фирменный бургер, вы не
-                разочаруетесь!!
+              <p class="text-in-blocks">
+                                  Всегда заказывайте топовый фирменный бургер, вы&nbsp;не
+                                  разочаруетесь!!
               </p>
               <img
                 class="logo-line"
@@ -142,9 +156,9 @@
             </li>
             <li class="service-1">
               <h3 class="header-3">Сувениры</h3>
-              <p>
-                Не только китайского, но и настоящего местного производства!
-              </p>
+                <p class="text-in-blocks">
+                  Не&nbsp;только китайского, но&nbsp;и&nbsp;настоящего местного производства!
+                </p>
               <img
                 class="logo-line"
                 src="images/icons/present.svg"
@@ -161,8 +175,7 @@
             предложения гостиниц в Седоне
           </p>
           <button class="button hotel-search-open-form" type="submit">
-            ПОИСК ГОСТИНИЦЫ В седоне
-          </button>
+            <span class="button-text">Поиск гостиницы в Седоне</span></button>
         </section>
         <section class="subscription">
           <h2 class="header-2 subscription-header">Подпишитесь на рассылку</h2>
@@ -172,8 +185,7 @@
           <form
             class="subscription-form"
             action="https://echo.htmlacademy.ru/"
-            method="post"
-          >
+            method="post">
             <label class="visually-hidden" for="user-email">Ваш e-mail</label>
             <input
               id="user-email"
@@ -182,7 +194,7 @@
               placeholder="Ваш e-mail"
               required>
             <button class="button additional-button" type="submit">
-              Подписаться
+              <span class="button-text">Подписаться</span>
             </button>
           </form>
         </section>
@@ -211,7 +223,8 @@
                 class="footer-button"
                 href="https://t.me/htmlacademy"
                 target="_blank"
-                rel="noreferrer noopener">
+                rel="noreferrer noopener"
+              >
                 <img
                   class="footer-social-logo"
                   src="images/icons/social-telegram.svg"
@@ -225,7 +238,8 @@
                 class="footer-button"
                 href="https://www.youtube.com/user/htmlacademyru"
                 target="_blank"
-                rel="noreferrer noopener">
+                rel="noreferrer noopener"
+              >
                 <img
                   class="footer-social-logo"
                   src="images/icons/social-youtube.svg"
