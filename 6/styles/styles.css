@@ -152,6 +152,7 @@ body {
   font-size: 60px;
   line-height: 78px;
   padding-top: 35px;
+  margin-bottom: 8px;
 }
 
 .page-header {
@@ -193,7 +194,7 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 440px;
+  width: 540px;
   list-style-type: none;
 }
 
@@ -202,7 +203,7 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  max-width: 368px;
+  max-width: 338px;
   margin-left: auto;
   list-style-type: none;
   align-items: center;
@@ -476,7 +477,13 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  font-size: 16px;
+  line-height: 21px;
   margin-bottom: 40px;
+}
+
+.breadcrumbs > *:not(:last-child) {
+  margin-right: 10px;
 }
 
 .filter-list {
@@ -569,10 +576,20 @@ body {
   width: 340px;
   margin-right: 20px;
   margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .hotel-card:nth-child(3n) {
   margin-right: 0;
+}
+
+.hotel-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 20px;
 }
 
 .divider {
