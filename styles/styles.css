@@ -94,6 +94,7 @@ body {
 
 .selected-button {
   background-color: #7db54f;
+  padding: 8px 0;
 }
 
 .button-reset {
@@ -119,6 +120,7 @@ body {
 
 .subscription-header.header-2 {
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .header-3 {
@@ -207,6 +209,7 @@ body {
   margin-left: auto;
   list-style-type: none;
   align-items: center;
+  justify-content: center;
 }
 
 .navigation-item {
@@ -365,6 +368,7 @@ body {
   background-size: 1200px 414px;
   background-repeat: no-repeat;
   color: #ffffff;
+  margin-bottom: 40px;
 }
 
 .subscription-catalog {
@@ -374,6 +378,7 @@ body {
   background-color: #ffffff;
   background-size: 1200px 414px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .footer-index {
@@ -381,7 +386,6 @@ body {
   flex-direction: row;
   min-width: 1060px;
   margin: 0 auto;
-  margin-top: 40px;
   margin-bottom: 30px;
   padding: 0 clamp(20px, 5vw, 70px);
   justify-content: space-between;
@@ -564,35 +568,103 @@ body {
 }
 
 .hotel-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   list-style-type: none;
-  padding: 0;
   margin: 0;
   margin-bottom: 40px;
+  padding: 0;
+  gap: 20px;
 }
 
 .hotel-card {
-  width: 340px;
-  margin-right: 20px;
-  margin-bottom: 20px;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
-.hotel-card:nth-child(3n) {
-  margin-right: 0;
+.hotel-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-areas:
+    'hotel-card-link hotel-card-link'
+    'hotel-card-title hotel-card-title'
+    'hotel-type hotel-price'
+    'hotel-card-button additional-button'
+    'stars rating';
+  min-width: 0;
+  gap: 16px 20px;
+  padding: 20px;
 }
 
-.hotel-card-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  margin: 20px;
+.hotel-card-title-link {
+  grid-area: hotel-card-title;
+  display: block;
+}
+
+.header-3.hotel-card-title {
+  margin: 0;
+  padding: 0;
+  max-width: 300px;
+}
+
+.hotel-type {
+  grid-area: hotel-type;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.hotel-price {
+  grid-area: hotel-price;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.hotel-card-link {
+  grid-area: hotel-card-link;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.hotel-card-link img {
+  display: block;
+}
+
+.hotel-card-button {
+  grid-area: hotel-card-button;
+}
+
+.hotel-card-button.button {
+  color: #ffffff;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.additional-button.catalog-button {
+  grid-area: additional-button;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.stars {
+  grid-area: stars;
+}
+
+.rating-value {
+  grid-area: rating;
+  padding: 8px 0;
 }
 
 .divider {
+  margin: 0;
+  padding: 0;
   margin-bottom: 40px;
 }
 
@@ -655,6 +727,65 @@ body {
 
 .pagination-link:active {
   background-color: #82b3d3;
+}
+
+.subscription-form {
+  display: flex;
+  align-items: stretch;
+  max-width: 684px;
+  margin: 0 auto;
+}
+
+.subscription-form input {
+  flex: 1;
+  padding: 12px;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+}
+
+.subscription-form button {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.subscription-form input {
+  background-color: #f2f2f2;
+  border: none;
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.subscription-catalog-header {
+  max-width: 475px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subscription-text {
+  max-width: 475px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+.decor-element {
+  min-width: 20px;
+  min-height: 20px;
+  background-color: #e5e5e5;
+}
+
+.navigation-badge {
+  position: absolute;
+  top: 7px;
+}
+
+.button.navigation-list-open-form {
+  margin-left: 20px;
 }
 
 .visually-hidden {
