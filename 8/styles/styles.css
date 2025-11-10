@@ -91,6 +91,7 @@ body {
 
 .button:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .button:active {
@@ -98,6 +99,9 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.hotel-card-button.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 .button:disabled {
   background-color: #e5e5e5;
 }
@@ -238,6 +242,7 @@ body {
   height: 64px;
   position: relative;
   margin-bottom: auto;
+  margin-right: 30px;
 }
 
 .navigation {
@@ -267,10 +272,6 @@ body {
 
 .navigation-user .navigation-link.with-an-decor-element-2 {
   padding: 0;
-}
-
-.navigation-link-current {
-  margin-left: 30px;
 }
 
 .navigation-link-current::after {
@@ -540,6 +541,10 @@ body {
   align-content: center;
 }
 
+.footer-index .footer-button {
+  color: #83b3d3;
+}
+
 .footer-social {
   display: flex;
   margin: 0;
@@ -572,31 +577,24 @@ body {
   text-decoration: none;
   outline: none;
   transition: opacity 0.2s, outline 0.2s;
+  color: #83b3d3;
 }
 
-.footer-button img {
-  display: block;
-  width: auto;
-  height: auto;
-  opacity: 0.8;
-}
-
-.footer-button:hover img {
-  opacity: 1;
+.footer-button:hover {
+  color: #68a2ca;
 }
 
 .footer-button:focus-visible {
-  opacity: 1;
+  color: #68a2ca;
+  outline: none;
 }
 
 .footer-button:active {
-  opacity: 0.3;
+  color: rgba(104, 162, 202, 0.3);
 }
 
-.footer-social-logo {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.footer-social-item:nth-child(2) .footer-social-logo {
+  transform: translateX(-4px);
 }
 
 .footer-contacts {
@@ -613,6 +611,7 @@ body {
 
 .footer-phone:focus-visible {
   color: #756157;
+  outline: none;
 }
 
 .footer-logo-html {
@@ -624,7 +623,7 @@ body {
   justify-self: center;
 }
 
-.logo-htmlacademy:hover {
+.footer-logo:hover {
   color: #756157;
 }
 
@@ -632,8 +631,9 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.logo-htmlacademy:focus-visible {
+.footer-logo:focus {
   color: #756157;
+  outline: none;
 }
 
 .inner-header {
@@ -969,6 +969,7 @@ body {
 
 .pagination-link:focus-visible {
   background-color: #68a2ca;
+  outline: none;
 }
 
 .pagination-link:active {
@@ -1058,6 +1059,7 @@ body {
 
 .button.navigation-list-open-form {
   margin-left: 20px;
+  padding: 8px 34px;
 }
 
 .visually-hidden {
