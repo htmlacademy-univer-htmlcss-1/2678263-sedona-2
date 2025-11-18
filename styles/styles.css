@@ -1032,6 +1032,7 @@ body {
 .subscription-form input {
   flex: 1;
   padding: 14px 20px;
+  border: 3px solid transparent;
   border-right: none;
   border-radius: 4px 0 0 4px;
   box-sizing: border-box;
@@ -1344,6 +1345,10 @@ input[type="number"]::-webkit-inner-spin-button {
   pointer-events: none;
 }
 
+.price-field-max-min {
+  max-width: 75px;
+}
+
 .filter-group-button {
   margin-bottom: 32px;
 }
@@ -1418,29 +1423,64 @@ input[type="number"]::-webkit-inner-spin-button {
 .search-form {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 23px;
 }
 
 .arrival-and-departure {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 119px 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 18px;
   align-items: center;
 }
 
+.arrival-and-departure-label {
+  grid-area: 1 / 1;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.date-error-message {
+  grid-area: 2 / 2;
+  color: #ff5757;
+  min-height: 21px;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 4px;
+  font-weight: 400;
+
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.date-error-message.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .arrival-and-departure-input {
-  width: 440px;
-  height: 48px;
+  grid-area: 1 / 2;
+  width: 100%;
   background-color: #f2f2f2;
   border-radius: 4px;
-  padding: 0 20px;
+  padding: 12px 20px;
   box-sizing: border-box;
-  border: none;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  border: 3px solid transparent;
 }
 
 .guests {
@@ -1465,46 +1505,56 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .guests-input {
-  width: 50px;
-  height: 48px;
+  width: 35px;
   background-color: transparent;
+  box-sizing: border-box;
   border: none;
   font-family: inherit;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 42px;
   font-weight: 700;
   text-align: center;
   padding: 0;
   margin: 0;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
-.arrival-and-departure-input:hover {
+.arrival-and-departure-input:hover,
+.number-control-wrapper:hover,
+.guests-input:hover {
   color: rgba(0, 0, 0, 0.6);
   background-color: #e5e5e5;
   cursor: pointer;
 }
 
-.arrival-and-departure-input:active {
-  color: #000000;
-  background-color: #e5e5e5;
-  cursor: pointer;
-}
-
-.arrival-and-departure-input:focus {
+.arrival-and-departure-input:focus-visible {
   color: rgba(0, 0, 0, 0.6);
   background-color: #e5e5e5;
   border: 3px solid #83b3d3;
   outline: none;
-  cursor: pointer;
+}
+
+.guests-input:focus-visible {
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  outline: none;
+  background-color: #e5e5e5;
 }
 
 .guest-wrapper {
   position: relative;
-  height: 48px;
   display: flex;
   justify-content: space-between;
   min-width: 247px;
   align-items: center;
+}
+
+.guests-wrapper-with-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
 }
 
 .number-control-wrapper {
@@ -1515,6 +1565,8 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 4px;
   overflow: hidden;
   justify-content: space-between;
+  box-sizing: border-box;
+  border: 3px solid transparent;
 }
 
 .number-control-wrapper-children {
@@ -1523,39 +1575,26 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-decrement {
   width: 20px;
-  height: 48px;
   background-color: transparent;
-  border: none;
+  cursor: pointer;
   padding: 0;
-  padding-left: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 .btn-increment {
   width: 20px;
-  height: 48px;
-  background-color: transparent;
-  border: none;
   cursor: pointer;
   padding: 0;
-  padding-right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
-.btn-decrement:hover,
-.btn-increment:hover {
-  color: #000000;
-  cursor: pointer;
-}
-
-.btn-decrement:focus-visible,
-.btn-increment:focus-visible {
-  color: #000000;
-  outline: none;
+.number-control-wrapper:focus-within {
   border: 3px solid #83b3d3;
 }
 
@@ -1571,7 +1610,7 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 149px;
   width: 14px;
   height: 2px;
-  background-image: url("../images/icons/minus.svg");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='2'%3E%3Crect width='14' height='2' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E");
   content: "";
 }
 
@@ -1581,8 +1620,24 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 220px;
   width: 14px;
   height: 14px;
-  background-image: url("../images/icons/plus.svg");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Crect x='6' y='0' width='2' height='14' fill='%23756157' fill-opacity='0.3'/%3E%3Crect x='0' y='6' width='14' height='2' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E");
   content: "";
+}
+
+.guest-wrapper:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='2'%3E%3Crect width='14' height='2' fill='%23000000'/%3E%3C/svg%3E");
+}
+
+.guest-wrapper:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Crect x='6' y='0' width='2' height='14' fill='%23000000'/%3E%3Crect x='0' y='6' width='14' height='2' fill='%23000000'/%3E%3C/svg%3E");
+}
+
+.guest-wrapper:active::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='2'%3E%3Crect width='14' height='2' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E");
+}
+
+.guest-wrapper:active::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Crect x='6' y='0' width='2' height='14' fill='%23756157' fill-opacity='0.3'/%3E%3Crect x='0' y='6' width='14' height='2' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E");
 }
 
 .tooltip {
@@ -1670,7 +1725,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .date-icon {
   position: absolute;
-  top: 190px;
+  top: 195px;
   transform: translateY(-70%);
   right: 92px;
   width: 16px;
@@ -1682,5 +1737,5 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .date-icon-2 {
-  top: 286px;
+  top: 298px;
 }
