@@ -183,9 +183,9 @@
             и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц
             в&nbsp;Седоне
           </p>
-          <a class="button hotel-search-open-form" href="modal.html">
+          <button class="button hotel-search-open-form" type="submit">
             <span class="button-text">Поиск гостиницы в Седоне</span>
-          </a>
+          </button>
         </section>
         <section class="subscription">
           <h2 class="header-2 subscription-header">Подпишитесь на рассылку</h2>
@@ -313,6 +313,135 @@
           </a>
         </section>
       </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <a class="modal-close-button" href="index.html">
+          <span class="visually-hidden">Закрыть</span>
+        </a>
+        <section class="modal-content">
+          <h2 class="header-2 modal-search-header">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru">
+            <div class="arrival-and-departure">
+              <label class="arrival-and-departure-label" for="arrival-date">
+                Дата Заезда:
+              </label>
+              <div class="input-wrapper">
+                <input
+                  class="arrival-and-departure-input"
+                  id="arrival-date"
+                  type="date"
+                  name="arrival-date">
+                <span class="date-icon" aria-hidden="true"></span>
+              </div>
+              <span class="date-error-message">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </div>
+            <div class="arrival-and-departure">
+              <label class="arrival-and-departure-label" for="departure-date">
+                Дата Выезда:
+              </label>
+              <div class="input-wrapper">
+                <input
+                  class="arrival-and-departure-input"
+                  id="departure-date"
+                  type="date"
+                  name="departure-date">
+                <span class="date-icon date-icon-2" aria-hidden="true"></span>
+              </div>
+              <span class="date-error-message">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </div>
+            <div class="guests-wrapper-with-button">
+              <div class="guests">
+                <div class="guest-wrapper">
+                  <label class="guests-label" for="adults">Взрослые:</label>
+                  <div class="number-control-wrapper">
+                    <button
+                      class="btn-decrement"
+                      type="button"
+                      aria-label="Уменьшить количество взрослых"
+                    >
+                      <span class="visually-hidden">Минус</span>
+                    </button>
+                    <input
+                      class="guests-input"
+                      id="adults"
+                      type="number"
+                      name="adults"
+                      value="2"
+                      min="0">
+                    <button
+                      class="btn-increment"
+                      type="button"
+                      aria-label="Увеличить количество взрослых"
+                    >
+                      <span class="visually-hidden">Плюс</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="guest-wrapper guest-wrapper-children">
+                  <div class="guest-icon-wrapper">
+                    <label class="guests-label" for="children">Дети:</label>
+                    <span class="tooltip">
+                      <button
+                        class="tooltip-toggle"
+                        type="button"
+                        aria-labelledby="tooltip-label-date"
+                      >
+                        <span class="visually-hidden">Подсказка</span>
+                      </button>
+                      <span
+                        class="tooltip-text"
+                        role="tooltip"
+                        id="tooltip-label-date"
+                      >
+                        Укажите количество детей, которые будут с вами, возраст
+                        которых от 6 до 18 лет. Дети до 6 лет размещаются
+                        бесплатно.
+                      </span>
+                    </span>
+                    <div
+                      class="number-control-wrapper number-control-wrapper-children"
+                    >
+                      <button
+                        class="btn-decrement"
+                        type="button"
+                        aria-label="Уменьшить количество детей"
+                      >
+                        <span class="visually-hidden">Минус</span>
+                      </button>
+
+                      <input
+                        class="guests-input"
+                        id="children"
+                        type="number"
+                        name="children"
+                        value="2"
+                        min="0">
+                      <button
+                        class="btn-increment"
+                        type="button"
+                        aria-label="Увеличить количество детей"
+                      >
+                        <span class="visually-hidden">Плюс</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="button additional-button modal-search-button"
+                type="submit"
+              >
+                Найти
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
